@@ -1,0 +1,62 @@
+/*index.php style css*/
+body {
+	margin: 0;
+}
+
+.d-flex {
+	display: flex;
+}
+
+header {
+	background-color: #f6fff8;
+	margin: auto;
+	flex-wrap: wrap;
+	padding: 0px 5%;
+}
+
+nav {
+	flex-wrap: wrap;
+	display: flex;
+}
+
+.p-2 input {
+	padding: 4px 15px;
+	border-radius: 50px;
+	margin-right: 20px;
+	width: 300px;
+}
+
+section {
+	flex-wrap: wrap;
+	display: flex;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.card {
+	padding: 20px;
+	margin: 20px 20px;
+	background-color: #f7f7f7;
+	box-shadow: 5px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+	background-color: #343A40;
+	color: white;
+	font-weight: bold;
+}
+
+footer .d-flex {
+	padding-top: 12px;
+	justify-content: center;
+}
+
+/*kontak.php style css*/
+
+
+/*tentang.php style css*/
+
