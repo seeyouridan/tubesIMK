@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Berita Populer</title>
+	<title>Berita Populer | RIA.NEWS</title>
 
 	<link rel="icon" type="png" href="../../img/icon.png">
 
@@ -25,5 +25,7 @@
 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 	<?php include '../' . 'footer.php' ?>
+
+	<script type="text/javascript" src="../../js/style.js"></script>
 </body>
 </html>

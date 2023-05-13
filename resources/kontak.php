@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Kontak</title>
+	<title>Hubungi Kami | RIA.NEWS</title>
 
 	<link rel="icon" type="png" href="../img/icon.png">
 
@@ -17,13 +17,23 @@
 <body>
 	<?php include 'header/' . 'header.php' ?>
 
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	<div class="content">
+		<h3>Kontak kami</h3>
+
+		<ul>
+			<li><b>Alamat : </b>&nbsp; Jl. Ir. H. Juanda, Kp. Panembong No.D27, RT/RW : 001/003, Kel/Desa : Mekarsari, Kecamatan Cianjur</li>
+			<li><b>Email : </b></i>&nbsp; cyberschoolindo@gmail.com</li>
+			<li><b>Whatsapp : </b></i>&nbsp; (+62) 888-0917-2421</li>
+			<li><b>Telepon : </b></i>&nbsp; (+62) 882-1279-7825</li>
+		</ul>
+
+		<div class="maps">
+			<p><b>MAPS</b></p>
+		</div>
+	</div>
 
 	<?php include 'footer.php' ?>
+
+	<script type="text/javascript" src="../js/style.js"></script>
 </body>
 </html>
