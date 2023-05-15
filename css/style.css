@@ -28,6 +28,7 @@ nav {
 
 /*card css*/
 .container {
+	max-width: 90%;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 20px;
@@ -45,13 +46,13 @@ nav {
 	height: 120px;
 }
 
-#info .card-body, #ingfo .card-body {
+.card-body{
 	max-width: 100%;
 	flex-wrap: wrap;
 	text-align: justify;
 }
 
-#info .card-body h5, #ingfo .card-body h5 {
+.card-body h5{
 	font-size: 10pt;
 }
 

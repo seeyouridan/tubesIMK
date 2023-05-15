@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/fontawesome/css/all.css">
 </head>
-<body onload="infoBerita()">
+<body>
 
 	<?php include 'resources/' . 'header/' . 'headerIndex.php'; ?>
 
@@ -66,11 +66,42 @@
 	</div>
 
 	<section>
+		<div class="container">
+			<?php if (mysqli_num_rows($query2) > 0) { ?>
+				<?php 
+					$no = 1;
+					while ($data = mysqli_fetch_array($query2)) {
+						$id = $data['id_terkini'];
+				?>
+			<div class="card">
+				<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">Berita Terkini</span>
+				<?php echo "<img src='img/terkini/$data[gambar]'>"; ?>	
+				<div class="card-body">
+					<?php echo "<a href='berita.php?id_terkini=$id'><h6 class='card-title'>$data[judul]</h6></a>"; ?>
+				</div>
+			</div>
 
-		<div id="info" class="container"></div>
+			<?php $no++; } ?>
+		<?php } ?>
+
 		<hr>
-		<div id="ingfo" class="container"></div>
-		
+
+		<?php if (mysqli_num_rows($query) > 0) { ?>
+			<?php $no = 1;
+				while ($data2 = mysqli_fetch_array($query)) {
+					$id2 = $data2['id_populer'];
+				?>
+			<div class="card">
+				<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">Berita Populer</span>
+				<?php echo "<img src='img/populer/$data2[gambar]'>"; ?>
+				<div class="card-body">
+					<?php echo "<a href='berita.php?id_populer=$id2'><h6 class='card-title'>$data2[judul]</h6></a>"; ?>
+				</div>
+			</div>
+
+			<?php $no++; } ?>
+		<?php } ?>
+	    </div>
 	</section>
 
 	<?php include 'resources/' . 'footer/' . 'footer.php'; ?>
