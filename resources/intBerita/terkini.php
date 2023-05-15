@@ -1,3 +1,9 @@
+<?php 
+
+	include '../' . '../' . 'koneksi.php';
+
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +13,7 @@
 
 	<link rel="icon" type="png" href="../../img/icon.png">
 
-	<link rel="stylesheet" type="text/css" href="../../css/style.css?<?php echo time(); ?>">
+	<link rel="stylesheet" type="text/css" href="../../css/style2.css?<?php echo time(); ?>">
 	<link rel="stylesheet" type="text/css" href="../../css/dropdown.css?<?php echo time(); ?>">
 	<link rel="stylesheet" type="text/css" href="../../css/carousel.css?<?php echo time(); ?>">
 
@@ -15,17 +21,53 @@
 	<link rel="stylesheet" href="../../assets/fontawesome/css/all.css">
 </head>
 <body>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="../../js/script.js"></script>
+
 	<?php include '../' . 'header/' . 'headerBerita.php' ?>
 
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	<div class="container">
+		<?php if (mysqli_num_rows($query2) > 0) { ?>
+		<?php $no = 1;
+			while ($data = mysqli_fetch_array($query2)) {
+		?>
 
-	<?php include '../' . 'footer.php' ?>
+		<div class="card mb-3">
+			<div class="row g-0">
+				<div class="col-md-4">
+					<?php echo "<img src='../../img/terkini/$data[gambar]' class='img-fluid'>" ?>
+				</div>
+				<div class="col-md-8">
+					<div class="card-body">
+						<?php echo "<h5 class='card-title'>$data[judul]</h5>"; ?>
+						<div class="showContent-frame">
+						<?php
+							$showContent = "<p class='card-text'>$data[deskripsi]</p>";
+							$showFronted = explode('##', $showContent);
 
-	<script type="text/javascript" src="../../js/style.js"></script>
+							echo '<div class="showFronted1">' . $showFronted[0] . '</div>';
+							
+							if (isset($showFronted[1])) {
+								echo '<div class="showFronted2" style="display: none;">' . $showFronted[1] . '</div>';
+							} else {
+								echo '<div class="showFronted2" style="display: none;"></div>';
+							}
+						?>
+
+						<div class="showContent-btn">
+							<button class="btn btn-outline-primary btn-block btn1">Selengkapnya<i class="fa fa-angle-down pl-2" aria-hidden="true"></i></button>
+							<button class="btn btn-outline-warning btn-block btn2" style="display: none;">Sembunyikan<i class="fa fa-angle-up pl-2" aria-hidden="true"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<?php $no++; } ?>
+		<?php } ?>
+	</div>
+
+	<?php include '../' . 'footer/' . 'footer.php' ?>
 </body>
 </html>

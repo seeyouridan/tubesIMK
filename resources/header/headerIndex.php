@@ -29,7 +29,9 @@
 			</div>
 
 			<div class="p-2">
-	  			<input type="text" name="" class="cari" id="cari" placeholder="Cari berita ...">
+	  			<form action="resources/intBerita/search.php" method="GET">
+	  				<input type="text" name="query" class="cari" placeholder="Cari berita ...">
+	  			</form>
 	  		</div>
 		</nav>
 

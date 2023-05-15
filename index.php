@@ -1,3 +1,9 @@
+<?php 
+
+	include 'koneksi.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +36,7 @@
 				<div class="carousel-item active">
 					<div class="bayangan"></div>
 					<div class="carousel-caption d-none d-md-block">
-						<p>Mencangkup informasi berita seputar SEA GAMES 2023</p>
+						<p>Berita informasi mengenai acara SEA GAMES 2023 di Camboja</p>
 					</div>
 					<img src="img/items/slide1.jpg">
 				</div>
@@ -39,7 +45,7 @@
 					<div class="carousel-caption d-none d-md-block">
 						<p>Berita seputar rumah Aki Jajang yang memiliki pemandangan curug yang sangat indah</p>
 					</div>
-					<img src="img/items/slide2.jpeg">
+					<img src="img/terkini/abah.jpeg">
 				</div>
 				<div class="carousel-item">
 					<div class="bayangan"></div>
@@ -60,15 +66,18 @@
 	</div>
 
 	<section>
+
 		<div id="info" class="container"></div>
+		<hr>
 		<div id="ingfo" class="container"></div>
+		
 	</section>
 
-	<?php include 'resources/' . 'footer.php'; ?>
+	<?php include 'resources/' . 'footer/' . 'footer.php'; ?>
 
 	<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/bootstrap/js/bootstrap.bundle.js"></script>
 
-	<script type="text/javascript" src="js/style.js"></script>
+	<script type="text/javascript" src="js/script.js?<?php echo time(); ?>"></script>
 </body>
 </html>

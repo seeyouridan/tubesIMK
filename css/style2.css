@@ -1,0 +1,51 @@
+body {
+	margin: 0;
+}
+
+.d-flex {
+	display: flex;
+}
+
+header {
+	background-color: #f6fff8;
+	margin: auto;
+	flex-wrap: wrap;
+	padding: 0px 5%;
+}
+
+nav {
+	flex-wrap: wrap;
+	display: flex;
+}
+
+.p-2 input {
+	padding: 4px 15px;
+	border-radius: 50px;
+	margin-right: 20px;
+	width: 300px;
+}
+
+/*container buat konten ya gais ya*/
+.container {
+	padding: 30px;
+}
+
+.card-body {
+	text-align: justify;
+}
+
+.img-fluid {
+	border-radius: 5px 0 0 5px;
+}
+
+/*footer css*/
+footer {
+	background-color: #343A40;
+	color: white;
+	font-weight: bold;
+}
+
+footer .d-flex {
+	padding-top: 12px;
+	justify-content: center;
+}
