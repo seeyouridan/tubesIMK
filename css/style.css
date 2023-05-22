@@ -108,3 +108,32 @@ footer .d-flex {
 	font-size: 14pt;
 	text-align: justify;
 }
+
+/*berita.php style css*/
+.berita {
+	font-family: calibri;
+	text-align: justify;
+	width: 80%;
+	margin: 10px auto;
+	border: 0.5px solid #d9d9d9;
+	background-color: #d9d9d9;
+}
+
+.head h1 {
+	font-size: 30pt;
+}
+
+.gambar {
+	width: auto;
+	margin: auto;
+}
+
+.gambar img{
+	height: 500px;
+	margin: auto;
+}
+
+.desc {
+	padding: 15px;
+	font-size: 13pt;
+}

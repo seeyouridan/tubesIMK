@@ -1,3 +1,5 @@
+<?php include 'resources/' . 'header/' . 'headerIndex.php'; ?>
+
 <?php
     include 'koneksi.php';
 
@@ -14,9 +16,21 @@
             $gambar = $row['gambar'];
             $deskripsi = $row['deskripsi'];
 
-            echo "<h1>$judul</h1>";
-            echo "<img src='img/terkini/$gambar' alt='Gambar Berita'>";
-            echo "<p>$deskripsi</p>";
+            echo "
+                <div class='berita'>
+                       <div class='head'>
+                           <center><h1>$judul</h1></center>
+                       </div>
+
+                    <div class='gambar'>
+                        <center><img src='img/terkini/$gambar' alt='Gambar Berita'></center>
+                    </div>
+
+                    <div class='desc'>
+                        <p>&nbsp;&nbsp;&nbsp;$deskripsi</p>
+                    </div>
+                </div>
+            ";
         } else {
             echo "Berita tidak ditemukan.";
         }
@@ -29,13 +43,25 @@
         if ($result && mysqli_num_rows($result) > 0) {
             $row = mysqli_fetch_assoc($result);
 
-            $judul = $row['judul'];
-            $gambar = $row['gambar'];
-            $deskripsi = $row['deskripsi'];
+        $judul = $row['judul'];
+        $gambar = $row['gambar'];
+        $deskripsi = $row['deskripsi'];
 
-            echo "<h1>$judul</h1>";
-            echo "<img src='img/populer/$gambar' alt='Gambar Berita'>";
-            echo "<p>$deskripsi</p>";
+        echo "
+            <div class='berita'>
+                   <div class='head'>
+                       <center><h1>$judul</h1></center>
+                   </div>
+
+                <div class='gambar'>
+                    <center><img src='img/populer/$gambar' alt='Gambar Berita'></center>
+                </div>
+
+                <div class='desc'>
+                    <p>&nbsp;&nbsp;&nbsp;$deskripsi</p>
+                </div>
+            </div>
+        ";
         } else {
             echo "Berita tidak ditemukan.";
         }
@@ -45,3 +71,22 @@
 
     mysqli_close($conn);
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?php echo $judul; ?></title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css?<?php echo time(); ?>">
+    <link rel="stylesheet" type="text/css" href="css/dropdown.css?<?php echo time(); ?>">
+    <link rel="stylesheet" type="text/css" href="css/carousel.css?<?php echo time(); ?>">
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+</head>
+<body>
+
+    <?php include 'resources/' . 'footer/' . 'footer.php'; ?>
+</body>
+</html>

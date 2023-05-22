@@ -21,7 +21,7 @@
 		<div class="accordion" id="accordionExample">
 			<div class="accordion-item">
 				<h2 class="accordion-header">
-					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color: #343A40; color: white;">
 						<h4>Tentang Kami</h4>
 					</button>
 				</h2>
@@ -34,7 +34,7 @@
 
 			<div class="accordion-item">
 				<h2 class="accordion-header">
-					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="background-color: #343A40; color: white;">
 						<h4>Tujuan</h4>
 					</button>
 				</h2>
@@ -47,7 +47,7 @@
 
 			<div class="accordion-item">
 				<h2 class="accordion-header">
-					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="background-color: #343A40; color: white;">
 						<h4>Logo dan Warna</h4>
 					</button>
 				</h2>
